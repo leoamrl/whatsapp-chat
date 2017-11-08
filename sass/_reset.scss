@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.responsive {
+  display: block;
+  max-width: 100%;
+  vertical-align: top;
+}
