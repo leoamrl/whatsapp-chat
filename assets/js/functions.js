@@ -1,15 +1,14 @@
-$.whatsappChat('#whatsapp', {
-  
-});
 
 // popup
 
 $('#button-whatsapp').click(function(){
   $('.popup').toggleClass('active');
+  $('#button-whatsapp span').html($('#button-whatsapp span').text() == 'Fechar' ? 'WhatsApp' : 'Fechar');
 })
 
 $('.popup__close').click(function(){
   $('.popup').removeClass('active');
+  $('#button-whatsapp span').html('WhatsApp');
 })
 
 // fontes

@@ -63,21 +63,39 @@ p {
   bottom: 16px;
   right: 16px;
   padding: 10px 24px;
-  background: #69db7c;
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #69db7c), color-stop(100%, #00c090));
-  background: -webkit-gradient(linear, left top, left bottom, from(#69db7c), to(#00c090));
-  background: linear-gradient(to bottom, #69db7c 0%, #00c090 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69db7c', endColorstr='#00c090', GradientType=0 );
   -webkit-box-shadow: 0px 5px 30px -6px rgba(0, 0, 0, 0.55);
           box-shadow: 0px 5px 30px -6px rgba(0, 0, 0, 0.55);
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 100;
   font-family: Lato, sans-serif;
   line-height: 100%;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 100; }
+  .button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background: #69db7c;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #69db7c), color-stop(100%, #00c090));
+    background: -webkit-gradient(linear, left top, left bottom, from(#69db7c), to(#00c090));
+    background: linear-gradient(to bottom, #69db7c 0%, #00c090 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69db7c', endColorstr='#00c090', GradientType=0 );
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    z-index: -1; }
+  .button:hover {
+    -webkit-box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.55);
+            box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.55); }
+    .button:hover::after {
+      top: -50%; }
   .button svg {
     float: left;
     margin-right: 10px; }
@@ -86,7 +104,7 @@ p {
   position: fixed;
   bottom: -100%;
   right: 16px;
-  width: 100%;
+  width: calc(100% - 32px);
   max-width: 372px;
   background: #fff;
   -webkit-box-shadow: 0px 5px 30px -6px rgba(0, 0, 0, 0.3);
