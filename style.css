@@ -13,7 +13,7 @@
 
 .responsive {
   display: block;
-  max-width: 100%;
+  max-width: 64px;
   vertical-align: top; }
 
 html {
@@ -58,7 +58,7 @@ p {
   p strong {
     color: #fff; }
 
-.button {
+.wppchat__button {
   position: fixed;
   bottom: 16px;
   right: 16px;
@@ -76,7 +76,7 @@ p {
   overflow: hidden;
   cursor: pointer;
   z-index: 100; }
-  .button::after {
+  .wppchat__button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -91,12 +91,12 @@ p {
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
     z-index: -1; }
-  .button:hover {
+  .wppchat__button:hover {
     -webkit-box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.55);
             box-shadow: 0px 10px 30px -6px rgba(0, 0, 0, 0.55); }
-    .button:hover::after {
+    .wppchat__button:hover::after {
       top: -50%; }
-  .button svg {
+  .wppchat__button svg {
     float: left;
     margin-right: 10px; }
 
